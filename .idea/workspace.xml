@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="354a5c4a-6a01-4119-91d5-93e505c1f919" name="Default" comment="Added 3 backgrounds, changed hero, monster, canvas size. Renamed some files.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/images/backgroundCave.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/images/backgroundDesert.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/images/backgroundForest.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/images/heroL.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/images/monsterL2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TheLabyrinth.iws" />
@@ -31,8 +26,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/content/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            <state relative-caret-position="527">
+              <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -97,6 +92,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -149,8 +146,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,7 +240,8 @@
       <updated>1475312378269</updated>
       <workItem from="1475312379794" duration="460000" />
       <workItem from="1476044654229" duration="597000" />
-      <workItem from="1476080037686" duration="5560000" />
+      <workItem from="1476080037686" duration="5632000" />
+      <workItem from="1476087620342" duration="1062000" />
     </task>
     <task id="LOCAL-00001" summary="Added 3 backgrounds, changed hero, monster, canvas size. Renamed some files.">
       <created>1476086646031</created>
@@ -268,14 +264,21 @@
       <option name="project" value="LOCAL" />
       <updated>1476087347030</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added 3 backgrounds, changed hero, monster, canvas size. Renamed some files.">
+      <created>1476087445344</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1476087445345</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6617000" />
+    <option name="totallyTimeSpent" value="7751000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -318,6 +321,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/content/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -349,8 +360,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        <state relative-caret-position="527">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
           <folding />
         </state>
       </provider>
