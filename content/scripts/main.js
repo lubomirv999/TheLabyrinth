@@ -14,7 +14,13 @@ bgImage.src = "images/backgroundForest.png";
 bgImage.onload = function () {
     bgReady = true;
 };
-
+//if(monstersCaught <= 25)
+//    bgImage.src = "images/backgroundForest.png";
+//else if(monstersCaught > 50 && monstersCaught <= 100)
+//    bgImage.src = "images/backgroundDesert.jpg";
+//else
+//    bgImage.src = "images/backgroundCave.jpg";
+//
 
 // Hero image
 let heroReady = false;
