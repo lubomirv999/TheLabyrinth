@@ -7,6 +7,7 @@ document.body.appendChild(canvas);
 
 let monstersCaught = 0;
 let startDate = new Date();
+
 // Background image
 let bgReady = false;
 let bgImage = new Image();
@@ -52,8 +53,11 @@ addEventListener("keyup", function (e) {
 let reset = function () {
 	//the score reset to 0, when monstersCaught becomes 100
 	if(monstersCaught == 100){
+		let time = parseInt((new Date()- startDate)/1000);
+		alert("Your time is: "+ time + " seconds"); //shows final time
+		//reset for a new game
 		monstersCaught = 0;
-		startDate = new Date()
+		startDate = new Date();
 	}
     hero.x = canvas.width / 2;
     hero.y = canvas.height / 2;
@@ -132,9 +136,7 @@ let render = function () {
     ctx.fillText("Monsters caught: " + monstersCaught, 32, 32);
 
     // Timer
-	
-	let elapsed = parseInt((new Date()- startDate)/1000);
-	console.log(elapsed);
+	var elapsed = parseInt((new Date()- startDate)/1000);
     ctx.fillStyle = "rgb(250, 250, 250)";
     ctx.font = "24px Helvetica";
     ctx.textAlign = "right";
@@ -164,4 +166,3 @@ requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame
 let then = Date.now();
 reset();
 main();
-
