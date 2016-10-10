@@ -67,19 +67,19 @@ let update = function (modifier) {
     if (38 in keysDown) { // Player holding up
         hero.y -= hero.speed * modifier;
         if (hero.y >= 600|| hero.y<0){
-            hero.y = 600;
+            hero.y = 529;
         }
     }
     if (40 in keysDown) { // Player holding down
         hero.y += hero.speed * modifier;
-        if (hero.y >= 600|| hero.y<0){
+        if (hero.y >= 530|| hero.y<0){
             hero.y=0;
         }
     }
     if (37 in keysDown) { // Player holding left
         hero.x -= hero.speed * modifier;
         if (hero.x >= 600|| hero.x<0){
-            hero.x = 600;
+            hero.x = 590;
         }
     }
     if (39 in keysDown) { // Player holding right
@@ -146,7 +146,7 @@ let main = function () {
 
     update(delta / 1000);
     render();
-
+	
     then = now;
 
     // Request to do this again ASAP
