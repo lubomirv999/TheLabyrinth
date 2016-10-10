@@ -14,6 +14,7 @@ bgImage.src = "images/backgroundForest.png";
 bgImage.onload = function () {
     bgReady = true;
 };
+
 //if(monstersCaught <= 25)
 //    bgImage.src = "images/backgroundForest.png";
 //else if(monstersCaught > 50 && monstersCaught <= 100)
@@ -57,6 +58,10 @@ addEventListener("keyup", function (e) {
 
 // Reset the game when the player catches a monster
 let reset = function () {
+	//the score reset to 0, when monstersCaught becomes 100
+	if(monstersCaught == 100){
+		monstersCaught = 0;
+	}
     hero.x = canvas.width / 2;
     hero.y = canvas.height / 2;
 
@@ -69,25 +74,25 @@ let reset = function () {
 let update = function (modifier) {
     if (38 in keysDown) { // Player holding up
         hero.y -= hero.speed * modifier;
-        if (hero.y >= 600 || hero.y < 0){
+        if (hero.y >= 600|| hero.y<0){
             hero.y = 600;
         }
     }
     if (40 in keysDown) { // Player holding down
         hero.y += hero.speed * modifier;
-        if (hero.y >= 600 || hero.y<0){
+        if (hero.y >= 600|| hero.y<0){
             hero.y=0;
         }
     }
     if (37 in keysDown) { // Player holding left
         hero.x -= hero.speed * modifier;
-        if (hero.x >= 650|| hero.x<0){
-            hero.x = 650;
+        if (hero.x >= 600|| hero.x<0){
+            hero.x = 600;
         }
     }
     if (39 in keysDown) { // Player holding right
         hero.x += hero.speed * modifier;
-        if (hero.x >= 650|| hero.x<0){
+        if (hero.x >= 600|| hero.x<0){
             hero.x=0;
         }
     }
