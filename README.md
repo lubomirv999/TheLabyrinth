@@ -1,6 +1,6 @@
 # The Labyrinth
 
-Team Project for Software University, JS Core September 2016 - The Labyrinth
+Team Project for Software University, JS Core September 2016 - MonsterHunt
 
 ## General Requirements
 
