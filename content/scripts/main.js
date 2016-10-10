@@ -62,25 +62,25 @@ let update = function (modifier) {
     if (38 in keysDown) { // Player holding up
         hero.y -= hero.speed * modifier;
         if (hero.y >= 600|| hero.y<0){
-            reset();
+            hero.y = 600;
         }
     }
     if (40 in keysDown) { // Player holding down
         hero.y += hero.speed * modifier;
         if (hero.y >= 600|| hero.y<0){
-            reset();
+            hero.y=0;
         }
     }
     if (37 in keysDown) { // Player holding left
         hero.x -= hero.speed * modifier;
         if (hero.x >= 600|| hero.x<0){
-            reset();
+            hero.x = 600;
         }
     }
     if (39 in keysDown) { // Player holding right
         hero.x += hero.speed * modifier;
         if (hero.x >= 600|| hero.x<0){
-            reset();
+            hero.x=0;
         }
     }
 
@@ -116,6 +116,14 @@ let render = function () {
     ctx.textAlign = "left";
     ctx.textBaseline = "top";
     ctx.fillText("Monsters caught: " + monstersCaught, 32, 32);
+
+    // Timer
+    ctx.fillStyle = "rgb(250, 250, 250)";
+    ctx.font = "24px Helvetica";
+    ctx.textAlign = "right";
+    ctx.textBaseline = "top";
+    ctx.fillText("Time: " + monstersCaught, 568, 32);
+
 };
 
 // The main game loop
@@ -140,3 +148,5 @@ requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame
 let then = Date.now();
 reset();
 main();
+
+
