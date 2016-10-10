@@ -6,7 +6,7 @@ canvas.height = 600;
 document.body.appendChild(canvas);
 
 let monstersCaught = 0;
-
+let startDate = new Date();
 // Background image
 let bgReady = false;
 let bgImage = new Image();
@@ -53,13 +53,14 @@ let reset = function () {
 	//the score reset to 0, when monstersCaught becomes 100
 	if(monstersCaught == 100){
 		monstersCaught = 0;
+		startDate = new Date()
 	}
     hero.x = canvas.width / 2;
     hero.y = canvas.height / 2;
 
     // Throw the monster somewhere on the screen randomly
-    monster.x = 32 + (Math.random() * (canvas.width - 64));
-    monster.y = 32 + (Math.random() * (canvas.height - 64));
+    monster.x = 32 + (Math.random() * (canvas.width - 74));
+    monster.y = 32 + (Math.random() * (canvas.height - 74));
 };
 
 // Update game objects
@@ -131,12 +132,15 @@ let render = function () {
     ctx.fillText("Monsters caught: " + monstersCaught, 32, 32);
 
     // Timer
+	
+	let elapsed = parseInt((new Date()- startDate)/1000);
+	console.log(elapsed);
     ctx.fillStyle = "rgb(250, 250, 250)";
     ctx.font = "24px Helvetica";
     ctx.textAlign = "right";
     ctx.textBaseline = "top";
-    ctx.fillText("Time: " + monstersCaught, 568, 32);
-
+    ctx.fillText("Time: " + elapsed, 568, 32);
+	
 };
 
 // The main game loop
@@ -148,7 +152,6 @@ let main = function () {
     render();
 	
     then = now;
-
     // Request to do this again ASAP
     requestAnimationFrame(main);
 };
