@@ -70,7 +70,7 @@ let update = function (modifier) {
     if (38 in keysDown) { // Player holding up
         hero.y -= hero.speed * modifier;
         if (hero.y >= 600|| hero.y<0){
-            hero.y = 600;
+            hero.y = 650;
         }
     }
     if (40 in keysDown) { // Player holding down
@@ -82,7 +82,7 @@ let update = function (modifier) {
     if (37 in keysDown) { // Player holding left
         hero.x -= hero.speed * modifier;
         if (hero.x >= 600|| hero.x<0){
-            hero.x = 600;
+            hero.x = 650;
         }
     }
     if (39 in keysDown) { // Player holding right
