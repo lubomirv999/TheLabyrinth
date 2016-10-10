@@ -1,4 +1,4 @@
-# The Labyrinth
+# Monster Hunt
 
 Team Project for Software University, JS Core September 2016 - MonsterHunt
 
