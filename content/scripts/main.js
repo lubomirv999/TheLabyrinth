@@ -15,14 +15,6 @@ bgImage.onload = function () {
     bgReady = true;
 };
 
-//if(monstersCaught <= 25)
-//    bgImage.src = "images/backgroundForest.png";
-//else if(monstersCaught > 50 && monstersCaught <= 100)
-//    bgImage.src = "images/backgroundDesert.jpg";
-//else
-//    bgImage.src = "images/backgroundCave.jpg";
-//
-
 // Hero image
 let heroReady = false;
 let heroImage = new Image();
@@ -112,6 +104,14 @@ let update = function (modifier) {
 // Draw everything
 let render = function () {
     if (bgReady) {
+		// Draw the corresponding background
+		if(monstersCaught <= 25)
+			bgImage.src = "images/backgroundForest.png";
+		else if(monstersCaught > 50 && monstersCaught <= 100)
+			bgImage.src = "images/backgroundDesert.jpg";
+		else
+			bgImage.src = "images/backgroundCave.jpg";
+		
         ctx.drawImage(bgImage, 0, 0);
     }
 
@@ -161,5 +161,4 @@ requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame
 let then = Date.now();
 reset();
 main();
-
 
