@@ -1,17 +1,20 @@
 // Create the canvas
 let canvas = document.createElement("canvas");
 let ctx = canvas.getContext("2d");
-canvas.width = 600;
+canvas.width = 650;
 canvas.height = 600;
 document.body.appendChild(canvas);
+
+let monstersCaught = 0;
 
 // Background image
 let bgReady = false;
 let bgImage = new Image();
+bgImage.src = "images/backgroundForest.png";
 bgImage.onload = function () {
     bgReady = true;
 };
-bgImage.src = "images/background1.png";
+
 
 // Hero image
 let heroReady = false;
@@ -19,7 +22,7 @@ let heroImage = new Image();
 heroImage.onload = function () {
     heroReady = true;
 };
-heroImage.src = "images/hero1.png";
+heroImage.src = "images/heroL.gif";
 
 // Monster image
 let monsterReady = false;
@@ -27,14 +30,13 @@ let monsterImage = new Image();
 monsterImage.onload = function () {
     monsterReady = true;
 };
-monsterImage.src = "images/monster1.png";
+monsterImage.src = "images/monsterL2.png";
 
 // Game objects
 let hero = {
     speed: 256 // movement in pixels per second
 };
 let monster = {};
-let monstersCaught = 0;
 
 // Handle keyboard controls
 let keysDown = {};
