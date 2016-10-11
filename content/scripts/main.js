@@ -108,8 +108,8 @@ let update = function (modifier) {
         && monster.y <= (hero.y + 32)
     ) {
         ++monstersCaught;
-        let catchTon = new Audio('sounds/monster.wav');
-        catchTon.play();
+        let catchMonsterTon = new Audio('sounds/monster.wav');
+        catchMonsterTon.play();
         reset();
     }
 };
@@ -117,13 +117,18 @@ let update = function (modifier) {
 // Draw everything
 let render = function () {
     if (bgReady) {
-		// Draw the corresponding background
-		if(monstersCaught <= 25)
-			bgImage.src = "images/backgroundForest.png";
-		else if(monstersCaught > 50 && monstersCaught <= 100)
+        // Draw the corresponding background and increasing the hero speed
+        if (monstersCaught <= 25){
+            bgImage.src = "images/backgroundForest.png";
+        }
+		else if(monstersCaught > 50 && monstersCaught <= 100){
 			bgImage.src = "images/backgroundDesert.jpg";
-		else
+            hero.speed = 356;
+		}
+		else{
 			bgImage.src = "images/backgroundCave.jpg";
+            hero.speed = 306;
+		}
 		
         ctx.drawImage(bgImage, 0, 0);
     }
