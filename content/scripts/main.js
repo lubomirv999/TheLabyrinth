@@ -108,6 +108,8 @@ let update = function (modifier) {
         && monster.y <= (hero.y + 32)
     ) {
         ++monstersCaught;
+        let catchTon = new Audio('sounds/monster.wav');
+        catchTon.play();
         reset();
     }
 };
