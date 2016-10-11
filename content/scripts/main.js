@@ -65,6 +65,12 @@ let reset = function () {
     // Throw the monster somewhere on the screen randomly
     monster.x = 32 + (Math.random() * (canvas.width - 74));
     monster.y = 32 + (Math.random() * (canvas.height - 74));
+
+    //Deleted are all object's traces after each movement
+    ctx.clearRect(0, 0, 650, 600);
+    ctx.drawImage(monsterImage, monster.x, monster.y);
+    ctx.drawImage(heroImage, hero.x, hero.y);
+
 };
 
 // Update game objects
@@ -142,7 +148,6 @@ let render = function () {
     ctx.textAlign = "right";
     ctx.textBaseline = "top";
     ctx.fillText("Time: " + elapsed, 568, 32);
-	
 };
 
 // The main game loop
